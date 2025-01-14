@@ -1,7 +1,7 @@
 
 import aiosqlite
 
-DB_PATH = "src/database/audio_metadata.db"
+DB_PATH = "audio_metadata.db"
 
 
 async def create_db():
