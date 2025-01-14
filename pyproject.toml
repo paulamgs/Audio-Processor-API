@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audio-processor-api"
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+]
+description = "Audio processor API"
+dependencies = ["numpy", "aiosqlite","pydantic>=2.0", "fastapi>=0.100.0", "uvicorn"]
+dynamic = ["version"]
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = [
+    "pyright",
+    "pytest",
+    "ruff",
+    "httpx",
+    "pytest-asyncio"
+]
+
+[project.urls]
+GitHub = "https://github.com/paulamgs/Audio-Processor-API"
+
+[[project.authors]]
+email = "paulamartingmz@gmail.com"
+name = "Paula Martin"
+
+[tool.ruff]
+src = ["src", "tests"]
+line-length = 88
+
+[tool.ruff.lint]
+extend-select = [
+    "B",
+    "C4",
+    "E",
+    "F",
+    "W",
+    "I",
+    "UP",
+    "SLF",
+]
+ignore = ["B008"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*" = ["SLF001"]

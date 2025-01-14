@@ -1,0 +1,48 @@
+# Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environment directories
+.venv/
+env/
+venv/
+ENV/
+
+# IDE/editor-specific files
+.vscode/
+.idea/
+.editorconfig
+*.sublime-workspace
+
+# Docker-related files
+*.log
+.docker/
+
+# Environment configuration files
+.env
+.env.*
+*.env
+
+# Database files
+*.db
+*.sqlite3
+*.db-journal
+
+# Test-related files
+.tox/
+.nox/
+.coverage/
+.hypothesis/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Other
+.DS_Store
+Thumbs.db
+*.bak
+*.swp

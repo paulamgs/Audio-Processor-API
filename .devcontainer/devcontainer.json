@@ -1,0 +1,26 @@
+{
+    "name": "audio-processor container",
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "target": "developer"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/venv/bin/python"
+            },
+            "extensions": [
+                "ms-python.python",
+                "github.vscode-github-actions",
+                "tamasfe.even-better-toml",
+                "redhat.vscode-yaml",
+                "ryanluker.vscode-coverage-gutters",
+                "charliermarsh.ruff",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    "workspaceFolder": "/workspaces/audio-processor-api",
+    "workspaceMount": "source=${localWorkspaceFolder}/..,target=/workspaces,type=bind",
+    "postCreateCommand": "pip install setuptools setuptools_scm && pip install -e .[dev]"
+}
